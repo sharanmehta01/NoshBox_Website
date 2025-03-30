@@ -28,7 +28,7 @@ body {
 /* Navigation */
 nav {
     background: var(--white);
-    padding: 1.5rem;
+    padding: 0.8rem 1.5rem;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -39,24 +39,17 @@ nav {
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
 }
 
 .logo::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 3px;
-    background: var(--secondary-color);
-    border-radius: 2px;
+    display: none;
 }
 
 .nav-links {
@@ -327,6 +320,17 @@ footer {
     text-align: center;
 }
 
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    max-height: 65px;
+    width: auto;
+}
+
 /* Partnership Section */
 .partnership {
     padding: 5rem 0;
@@ -372,7 +376,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
     nav {
-        padding: 1rem;
+        padding: 0.6rem 1rem;
     }
     
     .logo {
@@ -400,5 +404,9 @@ footer {
     .join-grid,
     .partnership-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .logo img {
+        max-height: 65px;
     }
 }
